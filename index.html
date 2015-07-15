@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>We Are The Stories We Tell | Bootstrap : HomePage</title>
+
+	<!--导入样式表和谷歌提供的字体，但字体可能因为墙载入过慢失效啦！-->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,100,400' rel='stylesheet' type='text/css'>
+
+<!--js-->
+<script src="js/jquery.min.js"></script>
+
+<!--js for mobile 不过有点问题所以先搁着吧-->
+<!--<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>-->
+</head>
+<body>
+	
+	<!-- banner -->
+	<div class="banner-with-text">
+		<div class="container">
+<!-- header -->	
+		<div class="header">
+			<div class="header-top">
+				<input type="text" placeholder="Search" required=" ">
+			</div>
+			<div class="clearfix"> </div>
+			<div class="header-bottom">
+				<div class="header-bottom-left">
+					<a href="index.html">We Are<span> The Stories</span> We Tell</a>
+				</div>
+				<div class="header-bottom-right">
+					<span class="menu">MENU</span>
+					<ul class="nav1">
+						<li class="cap"><a href="index.html">HOME</a></li>
+						<li><a href="about.html">ABOUT</a></li>
+						<li><a href="events.html">EVENTS</a></li>
+						<li><a href="films.html">TOP250</a></li>
+						<li><a href="blog.html">BLOG</a></li>
+						<li><a href="resume.html">RESUME</a></li>
+						<li><a href="contact.html">CONTACT</a></li>
+					</ul>
+					<!-- script for menu -->
+						<script> 
+							$( "span.menu" ).click(function() {
+							$( "ul.nav1" ).slideToggle( 300, function() {
+							 // Animation complete.
+							});
+							});
+						</script>
+					<!-- //script for menu -->
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>	
+
+		<!-- Slider- 首页轮播 -->
+				<script src="js/responsiveslides.min.js"></script>
+				 <script>
+				    
+				    $(function () {
+				      // Slideshow 4
+				      $("#slider3").responsiveSlides({
+				        auto: true,
+				        pager: true,
+				        nav: false,
+				        speed: 500,
+				        namespace: "callbacks",
+				        before: function () {
+				          $('.events').append("<li>before event fired.</li>");
+				        },
+				        after: function () {
+				          $('.events').append("<li>after event fired.</li>");
+				        }
+				      });
+				
+				    });
+				  </script>
+		
+			<!--轮播内容-->
+			<div  id="top" class="callbacks_container wow fadeInUp" data-wow-delay="0.5s">
+					<ul class="rslides" id="slider3">
+					<li>
+						<div class="banner">	
+							<div class="jumbotron banner-info">
+								<h1>著名电影里那些被忽略的细节</h1>
+								<p>Himamsa Shaik
+								2012年《泰坦尼克号》3D版本重新发行时，卡梅隆仅对电影做了一个微小的修改。
+								他说：“哦，我只修改了一个镜头。这都是因为美国首席天文学家Neil deGrasse Tyson给我发的一封Email，上面说在当年那个时间，也就是1912年的大西洋上，Rose趴在漂浮的木板上仰望天空中的星星，实际上她不可能看到电影里的星图，作为一位专业的天文学家，他可以赌上自己的名誉，我应该放上正确的星图。
+								于是我说，好吧，你这个狗XX的，把1912年4月15号凌晨4点20分的正确的星图发给我，我会把它放在电影里的。这就是我为什么改了一个镜头。”
+								</p>
+								<p><a class="btn btn-primary btn-lg" href="single.html" role="button">阅读全文</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="banner1">	
+							<div class="jumbotron banner-info">
+								<h1>来几部高分动画吧</h1>
+								<p>来自BBC推荐的十部成人动画佳作。
+								离开我们习惯的生活，用另一种视角重新审视这个世界。
+								这些片子里的痛苦、快乐、五味杂陈，也许只有大人才能体会。
+								而，又有什么比在漆黑中大哭一场更痛快淋漓的事？</p>
+								<p><a class="btn btn-primary btn-lg" href="single.html" role="button">阅读全文</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="banner2">	
+							<div class="jumbotron banner-info">
+								<h1>2015国外十佳影片</h1>
+								<p>近日，美国Criticwire电影网站发起了由88位专业影评人参与的2015上半年度十佳电影的评选，每人列出自己最中意的十部影片，以十分为满分进行评级。
+								其中，由乔治·米勒执导的《疯狂麦克斯4:狂暴之路》以63%的投票率，成为上年冠军之作，因为大多数的影评人都将它列在第一或第二的位置。</p>
+								<p><a class="btn btn-primary btn-lg" href="single.html" role="button">阅读全文</a></p>
+							</div>
+						</div>
+					</li>
+				</ul>
+		</div>
+		</div>
+	</div>
+	
+	<!--bannerbottom-->
+	<div class="banner-bdy">
+		<div class="container">
+	<div class="banner-bottom" id="events">
+			<div class="banner-bottom-grids">
+				<div class="col-md-4 banner-bottom-grid">
+					<img src="images/6.jpg" alt=" "/>
+					<div class="more">
+						<a href="single.html">阅读全文</a>
+					</div>
+				</div>
+				<div class="col-md-4 banner-bottom-grid">
+					<img src="images/7.jpg" alt=" "/>
+					<div class="more">
+						<a href="single.html">阅读全文</a>
+					</div>
+				</div>
+				<div class="col-md-4 banner-bottom-grid">
+					<img src="images/5.jpg" alt=" "/>
+					<div class="more">
+						<a href="single.html">阅读全文</a>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			
+			<div class="features">
+				<div class="col-md-9 features-left">
+					<h3> 近期上映的电影</h3>
+					<div class="features-left-grids">
+						<div class="col-md-4 features-left-grid">
+							<a href="single.html"><img src="images/1.jpg" alt=" " /></a>
+						</div>
+						<div class="col-md-8 jumbotron features-left-grid1">
+							<h4><a href="single.html">永远的孙悟空 | 大圣归来</a></h4>
+							<p>一千个人就有一千个孙悟空。
+							我们在大圣的故事里，看到的都是自己。
+							</p>
+							<p><a class="btn read btn-primary btn-lg" href="single.html" role="button">阅读全文</a></p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="features-left-grids">
+						<div class="col-md-4 features-left-grid">
+							<a href="single.html"><img src="images/3.jpg" alt=" " /></a>
+						</div>
+						<div class="col-md-8 jumbotron features-left-grid1">
+							<h4><a href="single.html">Begin Again</a></h4>
+							<p>事隔经年，我该如何问候你。以泪眼，以沉默。
+							还是在这座熟悉的城市里，给彼此一个重新开始的机会...
+							</p>
+							<p><a class="btn read btn-primary btn-lg" href="single.html" role="button">阅读全文</a></p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-3 features-right">
+					<div class="features-rgt">
+						<h3>Upcoming Events</h3>
+						<div class="features-rgt-grid">
+							<div class="features-rgt-grid-left">
+								<h4><a href="single.html">HACKer & Geek</a></h4>
+								<p>和程序猴子一起谈谈我们看过的黑客电影</p>
+								<a href="single.html">更多详情</a>
+							</div>
+							<div class="features-rgt-grid-right">
+								<p>16th.08</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="features-rgt-grid">
+							<div class="features-rgt-grid-left">
+								<h4><a href="single.html">回到小时候</a></h4>
+								<p>那些年我们一起看过的宫崎骏</p>
+								<a href="single.html">更多详情</a>
+							</div>
+							<div class="features-rgt-grid-right">
+								<p>27th.08</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="features-rgt-grid">
+							<div class="features-rgt-grid-left">
+								<h4><a href="single.html">反乌托邦三部曲</a></h4>
+								<p>听一听乌托邦世界破碎的声音</p>
+								<a href="single.html">更多详情</a>
+							</div>
+							<div class="features-rgt-grid-right">
+								<p>16th.09</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="all-events">
+							<a href="single.html">所有活动</a>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+	</div>
+
+	</div>
+	</div>
+
+	<!--footer-->
+	<div class="footer-top">
+	<div class="container">
+		<div class="footer-top-grids">
+			<div class="col-md-4 footer-top-grid">
+				<h3>About Me</h3>
+				<p>我们，就是我们讲的故事。 </p>
+				<div class="read1">
+					<a href="single.html">阅读全文</a>
+				</div>
+			</div>
+			<div class="col-md-4 footer-top-grid">
+				<h3>Connect With Me</h3>
+				<div class="twi-txt1">
+					<div class="twi">
+						<a href="#" class="flickr"> </a>
+					</div>
+					<div class="twi-text">
+						<p><a href="javscript:;">关注我的微博动态</a></p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="twi-txt1">
+					<div class="twi">
+						<a href="javscript:;" class="facebook"> </a>
+					</div>
+					<div class="twi-text">
+						<p><a href="javscript:;">关注我的豆瓣小站</a></p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-4 footer-top-grid">
+				<h3>other links</h3>
+				<ul class="last">
+					<li><a href="javscript:;">经典短篇阅读 | 豆瓣小组</a></li>
+					<li><a href="javscript:;">汇贤雅叙 | 大师兄朱炫</a></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+		<div class="footer">
+			<p>Copyright © 2015 We Are The Stories We Tell. All Rights Reserved | Design by MeggieZhang </a></p>
+		</div>
+	</div>
+
+	
+</body>
+</html>
